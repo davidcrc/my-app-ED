@@ -37,3 +37,7 @@
     4. class => className
     5. for => htmlFor
     
+
+# 4. Librerias de ayuda
+    - Prop Types: Valores por defewcto de ciertas variables
+    sudo yarn add prop-types

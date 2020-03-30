@@ -1,10 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 // import './App.css';
 import "./styles/styles.scss";
 import { Fragment } from "react";
-import city from "./city.jpg"
+import Curso from './Curso';
+
 import cursos from "./cursos.png"
+import city from "./city.jpg"
+
 
 // function App() {
 const App = () => {
@@ -28,10 +31,7 @@ const App = () => {
       <div className="main-banner img-container l-section" id="main-banner">
         <div className="ed-grid lg-grid-6">
           <div className="lg-cols-4 lg-x-2">
-            <img
-              className="main-banner__img"
-              src={city}
-            />
+            <img className="main-banner__img" src={city} alt="banner" />
             <div className="main-banner__data s-center">
               <p className="t2 s-mb-0">Título del banner</p>
               <p> Subtítulo del banner</p>
@@ -45,31 +45,11 @@ const App = () => {
 
 
       <div className="ed-grid m-grid-3">
-        <article className="card">
-          <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-            <img src={cursos} alt="" />
-          </div>
-          <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-            <h3 className="t5 s-mb-2 s-center">
-              Programación orientada a objetos con Go
-            </h3>
-            <div className="s-mb-2 s-main-center">
-              <div className="card__teacher s-cross-center">
-                <div className="card__avatar s-mr-1">
-                  <div className="circle img-container">
-                    <img src="path/img" alt="" />
-                  </div>
-                </div>
-                <span className="small">Alexys Lozada</span>
-              </div>
-            </div>
-            <div className="s-main-center">
-              <a className="button--ghost-alert button--tiny" href="#">
-                $ 20USD
-              </a>
-            </div>
-          </div>
-        </article>
+        <Curso title="ReactJs desde 0" image={cursos} price="25 USD" profesor="Beto"/>
+        <Curso title="ReactJs desde 1" image={cursos} price="35 USD" profesor="TOBI"/>
+        <Curso title="ReactJs desde 2" image={cursos} price="45 USD" profesor="TOTO"/>
+        <Curso title="ReactJs desde 3"  price="55 USD" profesor="TOBIAS"/>
+        <Curso />
       </div>
     </Fragment>
   );
