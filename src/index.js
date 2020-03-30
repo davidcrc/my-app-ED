@@ -4,11 +4,23 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+const root = document.getElementById('root')
+// const elemento = React.createElement(componente, propiedades, hijos)
+
+// const elemento = React.createElement("h1", {className: "saludos"}, "Hello world")
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <App />
+  ,
+  root
 );
 
 // If you want your app to work offline and load faster, you can change
