@@ -5,10 +5,28 @@ import "./styles/styles.scss";
 import { Fragment } from "react";
 import Curso from './Curso';
 
-import cursos from "./cursos.png"
+import clase from "./cursos.png"
 import city from "./city.jpg"
 
-
+const cursos = [
+  {
+    "title": "ReactJs desde 0",
+    "image": clase,
+    "price": 10,
+    "profesor": "BETO"
+  },
+  {
+    "title": "ReactJs desde 1",
+    "image": clase,
+    "price": 20,
+    "profesor": "Cuevas"
+  },{
+    "title": "ReactJs desde 2",
+    
+    "price": 30,
+    "profesor": "GOOO"
+  }
+]
 // function App() {
 const App = () => {
   return (
@@ -45,11 +63,16 @@ const App = () => {
 
 
       <div className="ed-grid m-grid-3">
-        <Curso title="ReactJs desde 0" image={cursos} price="25 USD" profesor="Beto"/>
-        <Curso title="ReactJs desde 1" image={cursos} price="35 USD" profesor="TOBI"/>
-        <Curso title="ReactJs desde 2" image={cursos} price="45 USD" profesor="TOTO"/>
+        {/* <Curso title="ReactJs desde 0" image={clase} price="25 USD" profesor="Beto"/>
+        <Curso title="ReactJs desde 1" image={clase} price="35 USD" profesor="TOBI"/>
+        <Curso title="ReactJs desde 2" image={clase} price="45 USD" profesor="TOTO"/>
         <Curso title="ReactJs desde 3"  price="55 USD" profesor="TOBIAS"/>
-        <Curso />
+        <Curso /> */}
+
+        {
+          /* Recorre los cursos obtendiendolo en curso*/
+          cursos.map( curso => <Curso title={curso.title} image={curso.image} price={curso.price} profesor={curso.profesor} />)
+        }
       </div>
     </Fragment>
   );
